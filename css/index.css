@@ -1,0 +1,329 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #DD83AD 0%, #C3E1FC 100%);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.30);
+    padding: 15px 40px;
+    color: white;
+    border-radius: 50px;
+    height: 35px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.header nav ul li {
+    display: inline;
+    
+}
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.header nav ul li a:not(.active)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.header nav ul li a:not(.active):hover::after {
+    width: 60%;
+}
+
+.header nav ul li a.active {
+    background: white;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.10);
+    transition: all 0.3s ease-in-out;
+}
+
+.header nav ul li a.active:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    transform: scale(2);
+}
+.hero {
+    text-align: left;
+    color: black;
+    padding: 40px 20px;
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+.hero h1{
+    margin: 0;
+    font-size: 75px;
+}
+.hero img {
+    height: 360px;
+    width: auto;
+    margin: 0;
+    align-items: right;
+}
+.content {
+    width: 85%;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.30);
+}
+.text-section {
+    margin-bottom: 40px;
+}
+.text-section img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.cards-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    width: calc(25% - 15px);
+    min-height: 350px;
+    background: #ddd;
+    border-radius: 30px;
+    filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.30));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card h2 {
+    margin-top: 1rem;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    flex-grow: 1;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.card img {
+    margin-top: 10px;
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.card .yellow a{
+    background: #E8A831;
+}
+
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin: 15px auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 90%;
+    box-sizing: border-box;
+}
+
+
+.card.green a { background: #2F8076; }
+.card.yellow a { background: #E8A831; }
+.card.purple a { background: #8B20B0; }
+.card.pink a { background: #FF3D70; }
+
+/* Update hover states */
+.card.green a:hover { background: #3a9d91; }
+.card.yellow a:hover { background: #f7b840; }
+.card.purple a:hover { background: #9b59b6; }
+.card.pink a:hover { background: #fd79a8; }
+
+.card a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.card.green a:hover { background: #50bdb0; color: white; }
+.card.yellow a:hover { background: #FFC107; color: white; }
+.card.purple a:hover { background: #9C27B0; color: white; }
+.card.pink a:hover { background: #E91E63; color: white; }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.green{
+    background: #9FD1CB;
+}
+
+.yellow{
+    background: #FAD693;
+}
+
+.purple{
+    background: #AA6FBF;
+}
+
+.pink{
+    background: #FF85A5;
+}
+
+footer {
+    background: white;
+    color: black;
+    margin-top: 40px;
+    border-radius: 20px 20px 0 0;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background: #4e2a78;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-section svg {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-section svg:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #666;
+}
+
+.cards {
+    margin-bottom: 40px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #4e2a78, transparent);
+    margin: 60px 0;
+}
+
+.sobre {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2.5em;
+    color: #4e2a78;
+    margin-bottom: 30px;
+}
+
+.sobre p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: #4e2a78;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.github-link i {
+    font-size: 1.2em;
+}
