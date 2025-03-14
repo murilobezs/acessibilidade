@@ -21,6 +21,12 @@ body {
     height: 35px;
     width: 90%;
     margin: 20px auto 0 auto;
+    position: relative;
+    z-index: 1000;
+}
+.header nav {
+    position: relative;
+    z-index: 1001;
 }
 .header nav ul {
     list-style: none;
@@ -81,6 +87,8 @@ body {
     justify-content: space-between;
     padding-left: 3.5rem;
     padding-right: 3.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1{
@@ -92,6 +100,8 @@ body {
     width: auto;
     margin: 0;
     align-items: right;
+    position: relative;
+    z-index: 1;
 }
 .content {
     width: 85%;
@@ -100,6 +110,8 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.30);
+    position: relative;
+    z-index: 1;
 }
 .text-section {
     margin-bottom: 40px;
@@ -326,4 +338,261 @@ footer {
 
 .github-link i {
     font-size: 1.2em;
+}
+
+.hamburger {
+    padding-bottom: 20px;
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    z-index: 1000;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 55px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+@media (max-width: 1040px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 1003;
+    }
+    
+    .hero h1 {
+        font-size: 60px;
+    }
+    
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .header nav {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        width: 220px;
+        height: auto;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease;
+        z-index: 1002;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        padding: 20px 0;
+    }
+
+    .header nav.active {
+        right: 20px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+    
+    /* When menu is not active */
+    .header nav:not(.active) {
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    /* Card styles for mobile */
+    .cards-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    .hamburger {
+        z-index: 1003;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .header nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .header nav ul li a {
+        display: inline-block;
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 100;
+    }
+
+    .header nav {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        height: auto;
+        background: rgba(0, 0, 0, 0.9);
+        transition: 0.3s;
+        padding: 15px 0;
+        border-radius: 12px;
+    }
+
+    .header nav.active {
+        right: 0;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .hero img {
+        height: 200px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-section svg {
+        margin: 15px auto;
+    }
+
+    .header {
+        width: 85%;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        width: 80%;
+        padding: 10px 15px;
+    }
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .header nav {
+        width: 180px;
+        right: 15px;
+    }
 }
