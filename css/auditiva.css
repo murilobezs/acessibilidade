@@ -1,0 +1,145 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2F8076, #57ccbe);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.30);
+    padding: 15px 40px;
+    color: white;
+    border-radius: 50px;
+    height: 35px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.header nav ul li {
+    display: inline;
+    
+}
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.header nav ul li a:not(.active)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.header nav ul li a:not(.active):hover::after {
+    width: 60%;
+}
+
+.header nav ul li a.active {
+    background: white;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.10);
+    transition: all 0.3s ease-in-out;
+}
+
+.header nav ul li a.active:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    transform: scale(2);
+}
+.hero {
+    text-align: left;
+    color: white;
+    padding: 40px 20px;
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+.hero h1{
+    margin: 0;
+    font-size: 96px;
+}
+.hero img {
+    height: 300px;
+    width: auto;
+    margin: 0;
+    align-items: right;
+}
+.content {
+    width: 85%;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.30);
+}
+.text-section {
+    margin-bottom: 40px;
+    text-align: justify;
+}
+.text-section img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.video-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.video {
+    width: 30%;
+    height: 180px;
+    background: #ddd;
+    border-radius: 15px;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card, .icon {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    color: black;
+    margin-top: 40px;
+    border-radius: 20px 20px 0 0;
+    height: 40px;
+}
