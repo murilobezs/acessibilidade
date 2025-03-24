@@ -51,3 +51,8 @@
 .loader-wrapper.visual-loader {
     background: linear-gradient(to right, #56CCF2, #2F80ED);
 }
+
+.img_logo{
+    margin-top: 1%;
+    width: 15%;
+}
