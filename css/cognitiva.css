@@ -142,3 +142,19 @@ footer {
     border-radius: 20px 20px 0 0;
     height: 40px;
 }
+
+.linha{
+    display: flex;
+    flex-direction: row wrap;
+    text-align: center;
+}
+
+.col-6{
+    width: 50%;
+}
+
+@media screen and (max-width:800px) {
+    .logo{
+        text-align: center;
+        width: 100%;
+    }
