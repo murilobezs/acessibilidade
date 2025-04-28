@@ -183,13 +183,13 @@ body {
 
 .card.green a { background: #2F8076; }
 .card.yellow a { background: #E8A831; }
-.card.purple a { background: #8B20B0; }
+.card.purple a { background: #0061ff; }
 .card.pink a { background: #FF3D70; }
 
 /* Update hover states */
 .card.green a:hover { background: #3a9d91; }
 .card.yellow a:hover { background: #f7b840; }
-.card.purple a:hover { background: #9b59b6; }
+.card.purple a:hover { background: #60efff; }
 .card.pink a:hover { background: #fd79a8; }
 
 .card a:hover {
@@ -219,7 +219,7 @@ body {
 }
 
 .purple{
-    background: #AA6FBF;
+    background: #2EA7F2;
 }
 
 .pink{
