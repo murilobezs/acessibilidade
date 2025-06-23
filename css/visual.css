@@ -1,0 +1,131 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #FF85A5 0%, #FFC2D4 100%);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.30);
+    padding: 15px 40px;
+    color: white;
+    border-radius: 50px;
+    height: 35px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    position: relative;
+    z-index: 1000;
+}
+
+.hero {
+    text-align: left;
+    color: black;
+    padding: 40px 20px;
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+.content {
+    width: 85%;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.30);
+}
+
+.text-section {
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.icon {
+    background: #FF85A5;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 150px;
+}
+
+/* Ana Clara Assistant Avatar */
+.assistant-avatar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.assistant-bubble {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-right: 15px;
+    max-width: 350px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.assistant-bubble.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.assistant-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #FF3D70;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.assistant-image:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .assistant-avatar {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .assistant-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .assistant-bubble {
+        max-width: 200px;
+        font-size: 14px;
+    }
+}

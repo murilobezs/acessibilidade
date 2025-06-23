@@ -121,6 +121,19 @@
         <p>Desenvolvido por 3º C - Grupo 8 | Copyright 2025</p>
     </footer>
 
+    <div class="assistant-avatar">
+        <div class="assistant-bubble">
+            "Oi! Eu sou Ana Clara! Vou te ajudar a entender melhor sobre deficiência motora! 😊"
+        </div>
+        <img src="../content/images/home/main/laura.png" alt="Ana Clara - Assistente Virtual" class="assistant-image">
+    </div>
+
+    <script>
+    document.querySelector('.assistant-image').addEventListener('click', function() {
+        const bubble = document.querySelector('.assistant-bubble');
+        bubble.classList.toggle('show');
+    });
+    </script>
     <script src="../js/animations.js"></script>
     <script src="../js/menu.js"></script>
 </body>

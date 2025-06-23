@@ -205,3 +205,61 @@ footer {
     margin-top:16px;
     color: #fff;
 }
+.assistant-avatar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.assistant-bubble {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-right: 15px;
+    max-width: 350px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.assistant-bubble.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.assistant-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #E8A831;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.assistant-image:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .assistant-avatar {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .assistant-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .assistant-bubble {
+        max-width: 200px;
+        font-size: 14px;
+    }
+}

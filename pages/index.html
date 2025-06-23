@@ -44,6 +44,7 @@
         <img src="../content/images/home/main/Untitled design (1).svg" alt="Ícone deficiência motora">
     </section>
 
+
     <main class="content">
         <section class="cards">
             <div class="cards-grid">
@@ -102,6 +103,19 @@
             <p>Desenvolvido por 3º C - Grupo B | Copyright © 2025</p>
         </div>
     </footer>
+    <div class="assistant-avatar">
+        <div class="assistant-bubble">
+            Oi! Eu sou Ana Clara, tenho 13 anos e estou aqui para ajudar você a conhecer mais sobre acessibilidade! 😊
+        </div>
+        <img src="../content/images/home/main/laura.png" alt="Ana Clara - Assistente Virtual" class="assistant-image">
+    </div>
+
+    <script>
+    document.querySelector('.assistant-image').addEventListener('click', function() {
+        const bubble = document.querySelector('.assistant-bubble');
+        bubble.classList.toggle('show');
+    });
+    </script>
     <script src="../js/animations.js"></script>
     <script src="../js/menu.js"></script>
 </body>

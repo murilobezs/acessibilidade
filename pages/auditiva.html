@@ -145,6 +145,19 @@
         <!-- <a href="https://www.flaticon.com/br/icones-gratis/ruido" title="ruído ícones">Ruído ícones criados por Radhe Icon - Flaticon</a> -->
     </footer>
 
+    <div class="assistant-avatar">
+        <div class="assistant-bubble">
+            "Oi! Eu sou Ana Clara e também tenho deficiência auditiva. Vou te ajudar a entender melhor sobre esse tema! 😊"
+        </div>
+        <img src="../content/images/home/main/laura.png" alt="Ana Clara - Assistente Virtual" class="assistant-image">
+    </div>
+
+    <script>
+    document.querySelector('.assistant-image').addEventListener('click', function() {
+        const bubble = document.querySelector('.assistant-bubble');
+        bubble.classList.toggle('show');
+    });
+    </script>
     <script src="../js/animations.js"></script>
     <script src="../js/menu.js"></script>
 </body>
